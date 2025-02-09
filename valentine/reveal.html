@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        /* Body and background styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7a8c, #ffb3c1);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Container for the Valentine's content */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 3s ease-out;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff4f5a;
+        }
+
+        /* Love message text */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ffeb3b;
+        }
+
+        /* Image styling */
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 20px 0;
+            animation: rotate 3s infinite linear;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 15px 30px;
+            background-color: #ff4f5a;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff1e2f;
+        }
+
+        /* Audio controls styling */
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 15px;
+            outline: none;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy Valentine's Day, my love!</h1>
+        <p id="love-message">
+            You mean the world to me. I'm so grateful to have you in my life.
+            You bring joy, happiness, and love to everything I do. ❤️
+        </p>
+
+        <!-- Insert a love-themed image here -->
+        <img src="7afc2c4a-fd99-445c-90a4-e34522fb880b.jpeg" alt="Heart Image" />
+
+        <!-- Button to trigger audio play -->
+        <button class="btn" onclick="playAudio()">Click to hear a love songs</button>
+
+        <!-- Audio element -->
+        <audio id="love-audio" controls>
+            <source src="Palagi  TJ Monterde Lyric Video  dhorynmarimon.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Function to play audio when the button is clicked
+        function playAudio() {
+            const audio = document.getElementById('love-audio');
+            audio.play();
+            document.getElementById('love-message').innerHTML = "I love you more than words can express. Forever and always, you'll be in my heart! 💖";
+        }
+    </script>
+
+</body>
+</html>

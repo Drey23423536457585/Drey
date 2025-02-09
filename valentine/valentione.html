@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        /* General page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7a8c, #ffb3c1);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Heart animation */
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #ff4f5a;
+            position: relative;
+            transform: rotate(45deg);
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff4f5a;
+            border-radius: 50%;
+            top: -50px;
+        }
+
+        .heart::before {
+            left: -50px;
+        }
+
+        .heart::after {
+            right: -50px;
+        }
+
+        /* Heart animation pulse */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Message text */
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Button to reset the animation */
+        .btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff4f5a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff1e2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart" onclick="showLoveMessage()"></div>
+    <h1>Happy Valentine's Day,Baby!</h1>
+    <p id="message">Click the heart to see a special surprise! 💖</p>
+    <a href="click me.html"><button class="btn" onclick="resetPage()">Click me for another surprise!</button></a>
+    
+
+    <script>
+        function showLoveMessage() {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = "I love you more than words can say! 💌";
+            messageElement.style.fontSize = '2rem';
+            messageElement.style.color = '#ffeb3b';
+        }
+
+        function resetPage() {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = "Click the heart to see a special surprise! 💖";
+            messageElement.style.fontSize = '1.5rem';
+            messageElement.style.color = 'white';
+        }
+    </script>
+</body>
+</html>
